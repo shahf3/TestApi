@@ -100,21 +100,4 @@ After running tests, find your reports in the `reports/` directory. HTML reports
 
 ---
 
-## Requirements
-
-- Python 3.8+
-- See `requirements.txt` for all dependencies:
-  - openai, requests, pyyaml, jsonschema, jinja2, python-dotenv, click, rich, pydantic, typing-extensions
-
----
-
-## Acknowledgements
-
-- [OpenAI](https://openai.com/)
-- [Swagger/OpenAPI](https://swagger.io/)
-- [Jinja2](https://jinja.palletsprojects.com/)
-- [Pydantic](https://docs.pydantic.dev/)
-
----
-
 **Happy Testing!** 
