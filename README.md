@@ -108,18 +108,6 @@ After running tests, find your reports in the `reports/` directory. HTML reports
 
 ---
 
-## Contributing
-
-Pull requests and issues are welcome! Please open an issue for bugs or feature requests.
-
----
-
-## License
-
-MIT License
-
----
-
 ## Acknowledgements
 
 - [OpenAI](https://openai.com/)
