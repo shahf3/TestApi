@@ -1,0 +1,76 @@
+openapi: 3.0.0
+info:
+  title: My API
+  version: 1.0.0
+  description: My actual API for testing
+
+servers:
+  - url: https://your-api-domain.com/api/v1
+    description: Production API
+
+paths:
+  /users:
+    get:
+      summary: Get all users
+      tags: [users]
+      responses:
+        '200':
+          description: List of users
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    email:
+                      type: string
+                      format: email
+    
+    post:
+      summary: Create a new user
+      tags: [users]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  minLength: 1
+                email:
+                  type: string
+                  format: email
+                age:
+                  type: integer
+                  minimum: 0
+              required:
+                - name
+                - email
+      responses:
+        '201':
+          description: User created successfully
+        '400':
+          description: Invalid input data
+
+  /users/{id}:
+    get:
+      summary: Get user by ID
+      tags: [users]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: User details
+        '404':
+          description: User not found 

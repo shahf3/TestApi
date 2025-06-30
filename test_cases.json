@@ -1,0 +1,2047 @@
+[
+  {
+    "endpoint": {
+      "path": "/posts",
+      "method": "get",
+      "summary": "Get all posts",
+      "description": "Retrieve a list of all posts",
+      "parameters": [
+        {
+          "name": "_limit",
+          "type": "integer",
+          "location": "query",
+          "required": false,
+          "description": "Number of posts to return",
+          "default": null,
+          "param_schema": {
+            "type": "integer",
+            "default": 10
+          },
+          "example": null
+        },
+        {
+          "name": "_start",
+          "type": "integer",
+          "location": "query",
+          "required": false,
+          "description": "Starting index",
+          "default": null,
+          "param_schema": {
+            "type": "integer",
+            "default": 0
+          },
+          "example": null
+        }
+      ],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Successful response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Post"
+                }
+              }
+            }
+          }
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Valid Test Case 1 (Fallback)",
+    "description": "Fallback valid test case for GET /posts. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {
+        "_limit": 123,
+        "_start": 123
+      },
+      "path_params": {},
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 200,
+    "expected_schema": null,
+    "test_type": "valid",
+    "tags": [
+      "valid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts",
+      "method": "get",
+      "summary": "Get all posts",
+      "description": "Retrieve a list of all posts",
+      "parameters": [
+        {
+          "name": "_limit",
+          "type": "integer",
+          "location": "query",
+          "required": false,
+          "description": "Number of posts to return",
+          "default": null,
+          "param_schema": {
+            "type": "integer",
+            "default": 10
+          },
+          "example": null
+        },
+        {
+          "name": "_start",
+          "type": "integer",
+          "location": "query",
+          "required": false,
+          "description": "Starting index",
+          "default": null,
+          "param_schema": {
+            "type": "integer",
+            "default": 0
+          },
+          "example": null
+        }
+      ],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Successful response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Post"
+                }
+              }
+            }
+          }
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Valid Test Case 2 (Fallback)",
+    "description": "Fallback valid test case for GET /posts. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {
+        "_limit": 123,
+        "_start": 123
+      },
+      "path_params": {},
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 200,
+    "expected_schema": null,
+    "test_type": "valid",
+    "tags": [
+      "valid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts",
+      "method": "get",
+      "summary": "Get all posts",
+      "description": "Retrieve a list of all posts",
+      "parameters": [
+        {
+          "name": "_limit",
+          "type": "integer",
+          "location": "query",
+          "required": false,
+          "description": "Number of posts to return",
+          "default": null,
+          "param_schema": {
+            "type": "integer",
+            "default": 10
+          },
+          "example": null
+        },
+        {
+          "name": "_start",
+          "type": "integer",
+          "location": "query",
+          "required": false,
+          "description": "Starting index",
+          "default": null,
+          "param_schema": {
+            "type": "integer",
+            "default": 0
+          },
+          "example": null
+        }
+      ],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Successful response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Post"
+                }
+              }
+            }
+          }
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Invalid Test Case 1 (Fallback)",
+    "description": "Fallback invalid test case for GET /posts. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {
+        "_limit": "not_a_number",
+        "_start": "not_a_number"
+      },
+      "path_params": {},
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 400,
+    "expected_schema": null,
+    "test_type": "invalid",
+    "tags": [
+      "invalid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts",
+      "method": "get",
+      "summary": "Get all posts",
+      "description": "Retrieve a list of all posts",
+      "parameters": [
+        {
+          "name": "_limit",
+          "type": "integer",
+          "location": "query",
+          "required": false,
+          "description": "Number of posts to return",
+          "default": null,
+          "param_schema": {
+            "type": "integer",
+            "default": 10
+          },
+          "example": null
+        },
+        {
+          "name": "_start",
+          "type": "integer",
+          "location": "query",
+          "required": false,
+          "description": "Starting index",
+          "default": null,
+          "param_schema": {
+            "type": "integer",
+            "default": 0
+          },
+          "example": null
+        }
+      ],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Successful response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Post"
+                }
+              }
+            }
+          }
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Invalid Test Case 2 (Fallback)",
+    "description": "Fallback invalid test case for GET /posts. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {
+        "_limit": "not_a_number",
+        "_start": "not_a_number"
+      },
+      "path_params": {},
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 400,
+    "expected_schema": null,
+    "test_type": "invalid",
+    "tags": [
+      "invalid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts",
+      "method": "get",
+      "summary": "Get all posts",
+      "description": "Retrieve a list of all posts",
+      "parameters": [
+        {
+          "name": "_limit",
+          "type": "integer",
+          "location": "query",
+          "required": false,
+          "description": "Number of posts to return",
+          "default": null,
+          "param_schema": {
+            "type": "integer",
+            "default": 10
+          },
+          "example": null
+        },
+        {
+          "name": "_start",
+          "type": "integer",
+          "location": "query",
+          "required": false,
+          "description": "Starting index",
+          "default": null,
+          "param_schema": {
+            "type": "integer",
+            "default": 0
+          },
+          "example": null
+        }
+      ],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Successful response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Post"
+                }
+              }
+            }
+          }
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Boundary Test Case 1 (Fallback)",
+    "description": "Fallback boundary test case for GET /posts. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {
+        "_limit": 0,
+        "_start": 0
+      },
+      "path_params": {},
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 200,
+    "expected_schema": null,
+    "test_type": "boundary",
+    "tags": [
+      "boundary",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts",
+      "method": "post",
+      "summary": "Create a new post",
+      "description": "Create a new post with the provided data",
+      "parameters": [],
+      "request_body": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PostInput"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "201": {
+          "description": "Post created successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Post"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Invalid input data"
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Valid Test Case 1 (Fallback)",
+    "description": "Fallback valid test case for POST /posts. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {},
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 200,
+    "expected_schema": null,
+    "test_type": "valid",
+    "tags": [
+      "valid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts",
+      "method": "post",
+      "summary": "Create a new post",
+      "description": "Create a new post with the provided data",
+      "parameters": [],
+      "request_body": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PostInput"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "201": {
+          "description": "Post created successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Post"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Invalid input data"
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Valid Test Case 2 (Fallback)",
+    "description": "Fallback valid test case for POST /posts. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {},
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 200,
+    "expected_schema": null,
+    "test_type": "valid",
+    "tags": [
+      "valid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts",
+      "method": "post",
+      "summary": "Create a new post",
+      "description": "Create a new post with the provided data",
+      "parameters": [],
+      "request_body": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PostInput"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "201": {
+          "description": "Post created successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Post"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Invalid input data"
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Invalid Test Case 1 (Fallback)",
+    "description": "Fallback invalid test case for POST /posts. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {},
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 400,
+    "expected_schema": null,
+    "test_type": "invalid",
+    "tags": [
+      "invalid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts",
+      "method": "post",
+      "summary": "Create a new post",
+      "description": "Create a new post with the provided data",
+      "parameters": [],
+      "request_body": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PostInput"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "201": {
+          "description": "Post created successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Post"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Invalid input data"
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Invalid Test Case 2 (Fallback)",
+    "description": "Fallback invalid test case for POST /posts. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {},
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 400,
+    "expected_schema": null,
+    "test_type": "invalid",
+    "tags": [
+      "invalid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts",
+      "method": "post",
+      "summary": "Create a new post",
+      "description": "Create a new post with the provided data",
+      "parameters": [],
+      "request_body": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PostInput"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "201": {
+          "description": "Post created successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Post"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Invalid input data"
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Boundary Test Case 1 (Fallback)",
+    "description": "Fallback boundary test case for POST /posts. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {},
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 200,
+    "expected_schema": null,
+    "test_type": "boundary",
+    "tags": [
+      "boundary",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts/{id}",
+      "method": "get",
+      "summary": "Get a specific post",
+      "description": "Retrieve a post by its ID",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "location": "path",
+          "required": true,
+          "description": "Post ID",
+          "default": null,
+          "param_schema": {
+            "type": "integer"
+          },
+          "example": null
+        }
+      ],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Successful response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Post"
+              }
+            }
+          }
+        },
+        "404": {
+          "description": "Post not found"
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Valid Test Case 1 (Fallback)",
+    "description": "Fallback valid test case for GET /posts/{id}. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {
+        "id": 123
+      },
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 200,
+    "expected_schema": null,
+    "test_type": "valid",
+    "tags": [
+      "valid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts/{id}",
+      "method": "get",
+      "summary": "Get a specific post",
+      "description": "Retrieve a post by its ID",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "location": "path",
+          "required": true,
+          "description": "Post ID",
+          "default": null,
+          "param_schema": {
+            "type": "integer"
+          },
+          "example": null
+        }
+      ],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Successful response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Post"
+              }
+            }
+          }
+        },
+        "404": {
+          "description": "Post not found"
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Valid Test Case 2 (Fallback)",
+    "description": "Fallback valid test case for GET /posts/{id}. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {
+        "id": 123
+      },
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 200,
+    "expected_schema": null,
+    "test_type": "valid",
+    "tags": [
+      "valid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts/{id}",
+      "method": "get",
+      "summary": "Get a specific post",
+      "description": "Retrieve a post by its ID",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "location": "path",
+          "required": true,
+          "description": "Post ID",
+          "default": null,
+          "param_schema": {
+            "type": "integer"
+          },
+          "example": null
+        }
+      ],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Successful response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Post"
+              }
+            }
+          }
+        },
+        "404": {
+          "description": "Post not found"
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Invalid Test Case 1 (Fallback)",
+    "description": "Fallback invalid test case for GET /posts/{id}. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {
+        "id": "not_a_number"
+      },
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 400,
+    "expected_schema": null,
+    "test_type": "invalid",
+    "tags": [
+      "invalid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts/{id}",
+      "method": "get",
+      "summary": "Get a specific post",
+      "description": "Retrieve a post by its ID",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "location": "path",
+          "required": true,
+          "description": "Post ID",
+          "default": null,
+          "param_schema": {
+            "type": "integer"
+          },
+          "example": null
+        }
+      ],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Successful response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Post"
+              }
+            }
+          }
+        },
+        "404": {
+          "description": "Post not found"
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Invalid Test Case 2 (Fallback)",
+    "description": "Fallback invalid test case for GET /posts/{id}. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {
+        "id": "not_a_number"
+      },
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 400,
+    "expected_schema": null,
+    "test_type": "invalid",
+    "tags": [
+      "invalid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts/{id}",
+      "method": "get",
+      "summary": "Get a specific post",
+      "description": "Retrieve a post by its ID",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "location": "path",
+          "required": true,
+          "description": "Post ID",
+          "default": null,
+          "param_schema": {
+            "type": "integer"
+          },
+          "example": null
+        }
+      ],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Successful response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Post"
+              }
+            }
+          }
+        },
+        "404": {
+          "description": "Post not found"
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Boundary Test Case 1 (Fallback)",
+    "description": "Fallback boundary test case for GET /posts/{id}. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {
+        "id": 0
+      },
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 200,
+    "expected_schema": null,
+    "test_type": "boundary",
+    "tags": [
+      "boundary",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts/{id}",
+      "method": "put",
+      "summary": "Update a post",
+      "description": "Update an existing post",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "location": "path",
+          "required": true,
+          "description": "Post ID",
+          "default": null,
+          "param_schema": {
+            "type": "integer"
+          },
+          "example": null
+        }
+      ],
+      "request_body": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PostInput"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "200": {
+          "description": "Post updated successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Post"
+              }
+            }
+          }
+        },
+        "404": {
+          "description": "Post not found"
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Valid Test Case 1 (Fallback)",
+    "description": "Fallback valid test case for PUT /posts/{id}. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {
+        "id": 123
+      },
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 200,
+    "expected_schema": null,
+    "test_type": "valid",
+    "tags": [
+      "valid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts/{id}",
+      "method": "put",
+      "summary": "Update a post",
+      "description": "Update an existing post",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "location": "path",
+          "required": true,
+          "description": "Post ID",
+          "default": null,
+          "param_schema": {
+            "type": "integer"
+          },
+          "example": null
+        }
+      ],
+      "request_body": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PostInput"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "200": {
+          "description": "Post updated successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Post"
+              }
+            }
+          }
+        },
+        "404": {
+          "description": "Post not found"
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Valid Test Case 2 (Fallback)",
+    "description": "Fallback valid test case for PUT /posts/{id}. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {
+        "id": 123
+      },
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 200,
+    "expected_schema": null,
+    "test_type": "valid",
+    "tags": [
+      "valid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts/{id}",
+      "method": "put",
+      "summary": "Update a post",
+      "description": "Update an existing post",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "location": "path",
+          "required": true,
+          "description": "Post ID",
+          "default": null,
+          "param_schema": {
+            "type": "integer"
+          },
+          "example": null
+        }
+      ],
+      "request_body": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PostInput"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "200": {
+          "description": "Post updated successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Post"
+              }
+            }
+          }
+        },
+        "404": {
+          "description": "Post not found"
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Invalid Test Case 1 (Fallback)",
+    "description": "Fallback invalid test case for PUT /posts/{id}. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {
+        "id": "not_a_number"
+      },
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 400,
+    "expected_schema": null,
+    "test_type": "invalid",
+    "tags": [
+      "invalid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts/{id}",
+      "method": "put",
+      "summary": "Update a post",
+      "description": "Update an existing post",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "location": "path",
+          "required": true,
+          "description": "Post ID",
+          "default": null,
+          "param_schema": {
+            "type": "integer"
+          },
+          "example": null
+        }
+      ],
+      "request_body": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PostInput"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "200": {
+          "description": "Post updated successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Post"
+              }
+            }
+          }
+        },
+        "404": {
+          "description": "Post not found"
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Invalid Test Case 2 (Fallback)",
+    "description": "Fallback invalid test case for PUT /posts/{id}. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {
+        "id": "not_a_number"
+      },
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 400,
+    "expected_schema": null,
+    "test_type": "invalid",
+    "tags": [
+      "invalid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts/{id}",
+      "method": "put",
+      "summary": "Update a post",
+      "description": "Update an existing post",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "location": "path",
+          "required": true,
+          "description": "Post ID",
+          "default": null,
+          "param_schema": {
+            "type": "integer"
+          },
+          "example": null
+        }
+      ],
+      "request_body": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PostInput"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "200": {
+          "description": "Post updated successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Post"
+              }
+            }
+          }
+        },
+        "404": {
+          "description": "Post not found"
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Boundary Test Case 1 (Fallback)",
+    "description": "Fallback boundary test case for PUT /posts/{id}. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {
+        "id": 0
+      },
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 200,
+    "expected_schema": null,
+    "test_type": "boundary",
+    "tags": [
+      "boundary",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts/{id}",
+      "method": "delete",
+      "summary": "Delete a post",
+      "description": "Delete a post by its ID",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "location": "path",
+          "required": true,
+          "description": "Post ID",
+          "default": null,
+          "param_schema": {
+            "type": "integer"
+          },
+          "example": null
+        }
+      ],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Post deleted successfully"
+        },
+        "404": {
+          "description": "Post not found"
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Valid Test Case 1 (Fallback)",
+    "description": "Fallback valid test case for DELETE /posts/{id}. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {
+        "id": 123
+      },
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 200,
+    "expected_schema": null,
+    "test_type": "valid",
+    "tags": [
+      "valid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts/{id}",
+      "method": "delete",
+      "summary": "Delete a post",
+      "description": "Delete a post by its ID",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "location": "path",
+          "required": true,
+          "description": "Post ID",
+          "default": null,
+          "param_schema": {
+            "type": "integer"
+          },
+          "example": null
+        }
+      ],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Post deleted successfully"
+        },
+        "404": {
+          "description": "Post not found"
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Valid Test Case 2 (Fallback)",
+    "description": "Fallback valid test case for DELETE /posts/{id}. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {
+        "id": 123
+      },
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 200,
+    "expected_schema": null,
+    "test_type": "valid",
+    "tags": [
+      "valid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts/{id}",
+      "method": "delete",
+      "summary": "Delete a post",
+      "description": "Delete a post by its ID",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "location": "path",
+          "required": true,
+          "description": "Post ID",
+          "default": null,
+          "param_schema": {
+            "type": "integer"
+          },
+          "example": null
+        }
+      ],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Post deleted successfully"
+        },
+        "404": {
+          "description": "Post not found"
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Invalid Test Case 1 (Fallback)",
+    "description": "Fallback invalid test case for DELETE /posts/{id}. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {
+        "id": "not_a_number"
+      },
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 400,
+    "expected_schema": null,
+    "test_type": "invalid",
+    "tags": [
+      "invalid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts/{id}",
+      "method": "delete",
+      "summary": "Delete a post",
+      "description": "Delete a post by its ID",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "location": "path",
+          "required": true,
+          "description": "Post ID",
+          "default": null,
+          "param_schema": {
+            "type": "integer"
+          },
+          "example": null
+        }
+      ],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Post deleted successfully"
+        },
+        "404": {
+          "description": "Post not found"
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Invalid Test Case 2 (Fallback)",
+    "description": "Fallback invalid test case for DELETE /posts/{id}. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {
+        "id": "not_a_number"
+      },
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 400,
+    "expected_schema": null,
+    "test_type": "invalid",
+    "tags": [
+      "invalid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/posts/{id}",
+      "method": "delete",
+      "summary": "Delete a post",
+      "description": "Delete a post by its ID",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "location": "path",
+          "required": true,
+          "description": "Post ID",
+          "default": null,
+          "param_schema": {
+            "type": "integer"
+          },
+          "example": null
+        }
+      ],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Post deleted successfully"
+        },
+        "404": {
+          "description": "Post not found"
+        }
+      },
+      "tags": [
+        "posts"
+      ],
+      "operation_id": null
+    },
+    "name": "Boundary Test Case 1 (Fallback)",
+    "description": "Fallback boundary test case for DELETE /posts/{id}. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {
+        "id": 0
+      },
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 200,
+    "expected_schema": null,
+    "test_type": "boundary",
+    "tags": [
+      "boundary",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/users",
+      "method": "get",
+      "summary": "Get all users",
+      "description": "Retrieve a list of all users",
+      "parameters": [],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Successful response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        }
+      },
+      "tags": [
+        "users"
+      ],
+      "operation_id": null
+    },
+    "name": "Valid Test Case 1 (Fallback)",
+    "description": "Fallback valid test case for GET /users. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {},
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 200,
+    "expected_schema": null,
+    "test_type": "valid",
+    "tags": [
+      "valid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/users",
+      "method": "get",
+      "summary": "Get all users",
+      "description": "Retrieve a list of all users",
+      "parameters": [],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Successful response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        }
+      },
+      "tags": [
+        "users"
+      ],
+      "operation_id": null
+    },
+    "name": "Valid Test Case 2 (Fallback)",
+    "description": "Fallback valid test case for GET /users. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {},
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 200,
+    "expected_schema": null,
+    "test_type": "valid",
+    "tags": [
+      "valid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/users",
+      "method": "get",
+      "summary": "Get all users",
+      "description": "Retrieve a list of all users",
+      "parameters": [],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Successful response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        }
+      },
+      "tags": [
+        "users"
+      ],
+      "operation_id": null
+    },
+    "name": "Invalid Test Case 1 (Fallback)",
+    "description": "Fallback invalid test case for GET /users. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {},
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 400,
+    "expected_schema": null,
+    "test_type": "invalid",
+    "tags": [
+      "invalid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/users",
+      "method": "get",
+      "summary": "Get all users",
+      "description": "Retrieve a list of all users",
+      "parameters": [],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Successful response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        }
+      },
+      "tags": [
+        "users"
+      ],
+      "operation_id": null
+    },
+    "name": "Invalid Test Case 2 (Fallback)",
+    "description": "Fallback invalid test case for GET /users. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {},
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 400,
+    "expected_schema": null,
+    "test_type": "invalid",
+    "tags": [
+      "invalid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/users",
+      "method": "get",
+      "summary": "Get all users",
+      "description": "Retrieve a list of all users",
+      "parameters": [],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Successful response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        }
+      },
+      "tags": [
+        "users"
+      ],
+      "operation_id": null
+    },
+    "name": "Boundary Test Case 1 (Fallback)",
+    "description": "Fallback boundary test case for GET /users. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {},
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 200,
+    "expected_schema": null,
+    "test_type": "boundary",
+    "tags": [
+      "boundary",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/users/{id}",
+      "method": "get",
+      "summary": "Get a specific user",
+      "description": "Retrieve a user by their ID",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "location": "path",
+          "required": true,
+          "description": "User ID",
+          "default": null,
+          "param_schema": {
+            "type": "integer"
+          },
+          "example": null
+        }
+      ],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Successful response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            }
+          }
+        },
+        "404": {
+          "description": "User not found"
+        }
+      },
+      "tags": [
+        "users"
+      ],
+      "operation_id": null
+    },
+    "name": "Valid Test Case 1 (Fallback)",
+    "description": "Fallback valid test case for GET /users/{id}. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {
+        "id": 123
+      },
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 200,
+    "expected_schema": null,
+    "test_type": "valid",
+    "tags": [
+      "valid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/users/{id}",
+      "method": "get",
+      "summary": "Get a specific user",
+      "description": "Retrieve a user by their ID",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "location": "path",
+          "required": true,
+          "description": "User ID",
+          "default": null,
+          "param_schema": {
+            "type": "integer"
+          },
+          "example": null
+        }
+      ],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Successful response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            }
+          }
+        },
+        "404": {
+          "description": "User not found"
+        }
+      },
+      "tags": [
+        "users"
+      ],
+      "operation_id": null
+    },
+    "name": "Valid Test Case 2 (Fallback)",
+    "description": "Fallback valid test case for GET /users/{id}. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {
+        "id": 123
+      },
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 200,
+    "expected_schema": null,
+    "test_type": "valid",
+    "tags": [
+      "valid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/users/{id}",
+      "method": "get",
+      "summary": "Get a specific user",
+      "description": "Retrieve a user by their ID",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "location": "path",
+          "required": true,
+          "description": "User ID",
+          "default": null,
+          "param_schema": {
+            "type": "integer"
+          },
+          "example": null
+        }
+      ],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Successful response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            }
+          }
+        },
+        "404": {
+          "description": "User not found"
+        }
+      },
+      "tags": [
+        "users"
+      ],
+      "operation_id": null
+    },
+    "name": "Invalid Test Case 1 (Fallback)",
+    "description": "Fallback invalid test case for GET /users/{id}. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {
+        "id": "not_a_number"
+      },
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 400,
+    "expected_schema": null,
+    "test_type": "invalid",
+    "tags": [
+      "invalid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/users/{id}",
+      "method": "get",
+      "summary": "Get a specific user",
+      "description": "Retrieve a user by their ID",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "location": "path",
+          "required": true,
+          "description": "User ID",
+          "default": null,
+          "param_schema": {
+            "type": "integer"
+          },
+          "example": null
+        }
+      ],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Successful response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            }
+          }
+        },
+        "404": {
+          "description": "User not found"
+        }
+      },
+      "tags": [
+        "users"
+      ],
+      "operation_id": null
+    },
+    "name": "Invalid Test Case 2 (Fallback)",
+    "description": "Fallback invalid test case for GET /users/{id}. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {
+        "id": "not_a_number"
+      },
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 400,
+    "expected_schema": null,
+    "test_type": "invalid",
+    "tags": [
+      "invalid",
+      "fallback"
+    ]
+  },
+  {
+    "endpoint": {
+      "path": "/users/{id}",
+      "method": "get",
+      "summary": "Get a specific user",
+      "description": "Retrieve a user by their ID",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "location": "path",
+          "required": true,
+          "description": "User ID",
+          "default": null,
+          "param_schema": {
+            "type": "integer"
+          },
+          "example": null
+        }
+      ],
+      "request_body": null,
+      "responses": {
+        "200": {
+          "description": "Successful response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            }
+          }
+        },
+        "404": {
+          "description": "User not found"
+        }
+      },
+      "tags": [
+        "users"
+      ],
+      "operation_id": null
+    },
+    "name": "Boundary Test Case 1 (Fallback)",
+    "description": "Fallback boundary test case for GET /users/{id}. AI generation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "input_data": {
+      "query_params": {},
+      "path_params": {
+        "id": 0
+      },
+      "headers": {},
+      "body": {}
+    },
+    "expected_status": 200,
+    "expected_schema": null,
+    "test_type": "boundary",
+    "tags": [
+      "boundary",
+      "fallback"
+    ]
+  }
+]

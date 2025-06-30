@@ -1,0 +1,241 @@
+openapi: 3.0.0
+info:
+  title: Sample API
+  version: 1.0.0
+  description: A sample API for testing the AI-Powered API Auto-Tester
+
+servers:
+  - url: https://jsonplaceholder.typicode.com
+    description: JSONPlaceholder API
+
+paths:
+  /posts:
+    get:
+      summary: Get all posts
+      description: Retrieve a list of all posts
+      tags:
+        - posts
+      parameters:
+        - name: _limit
+          in: query
+          description: Number of posts to return
+          required: false
+          schema:
+            type: integer
+            default: 10
+        - name: _start
+          in: query
+          description: Starting index
+          required: false
+          schema:
+            type: integer
+            default: 0
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Post'
+    
+    post:
+      summary: Create a new post
+      description: Create a new post with the provided data
+      tags:
+        - posts
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostInput'
+      responses:
+        '201':
+          description: Post created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+        '400':
+          description: Invalid input data
+
+  /posts/{id}:
+    get:
+      summary: Get a specific post
+      description: Retrieve a post by its ID
+      tags:
+        - posts
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Post ID
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+        '404':
+          description: Post not found
+    
+    put:
+      summary: Update a post
+      description: Update an existing post
+      tags:
+        - posts
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Post ID
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostInput'
+      responses:
+        '200':
+          description: Post updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+        '404':
+          description: Post not found
+    
+    delete:
+      summary: Delete a post
+      description: Delete a post by its ID
+      tags:
+        - posts
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Post ID
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Post deleted successfully
+        '404':
+          description: Post not found
+
+  /users:
+    get:
+      summary: Get all users
+      description: Retrieve a list of all users
+      tags:
+        - users
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+
+  /users/{id}:
+    get:
+      summary: Get a specific user
+      description: Retrieve a user by their ID
+      tags:
+        - users
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: User ID
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '404':
+          description: User not found
+
+components:
+  schemas:
+    Post:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Unique identifier for the post
+        title:
+          type: string
+          description: Title of the post
+        body:
+          type: string
+          description: Content of the post
+        userId:
+          type: integer
+          description: ID of the user who created the post
+      required:
+        - title
+        - body
+        - userId
+
+    PostInput:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Title of the post
+          minLength: 1
+          maxLength: 200
+        body:
+          type: string
+          description: Content of the post
+          minLength: 1
+        userId:
+          type: integer
+          description: ID of the user who created the post
+          minimum: 1
+      required:
+        - title
+        - body
+        - userId
+
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Unique identifier for the user
+        name:
+          type: string
+          description: Full name of the user
+        username:
+          type: string
+          description: Username of the user
+        email:
+          type: string
+          format: email
+          description: Email address of the user
+        phone:
+          type: string
+          description: Phone number of the user
+        website:
+          type: string
+          format: uri
+          description: Website URL of the user
+      required:
+        - name
+        - username
+        - email 
